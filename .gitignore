@@ -1,0 +1,7 @@
+# IDE related
+.idea/
+.vscode/
+
+# temporary and 3rd party
+node_modules/
+.report/
