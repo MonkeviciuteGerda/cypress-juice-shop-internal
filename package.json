@@ -1,0 +1,22 @@
+{
+  "name": "cypress-internal",
+  "version": "1.0.0",
+  "description": "\"# cypress-juice-shop-internal\"",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonkeviciuteGerda/cypress-juice-shop-internal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MonkeviciuteGerda/cypress-juice-shop-internal/issues"
+  },
+  "homepage": "https://github.com/MonkeviciuteGerda/cypress-juice-shop-internal#readme",
+  "dependencies": {
+    "cypress": "^4.5.0"
+  }
+}
