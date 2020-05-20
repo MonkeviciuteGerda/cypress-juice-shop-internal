@@ -15,4 +15,12 @@ describe('Home Page', () => {
         cy.get('[data-cy="accountButton"]').click();
         cy.get('[data-cy="userProfileButton"] span').should('contain.text', 'jane.doe@test.com');
     });
+
+    it('should be able to login without UI', () => {
+        cy.login('jane.doe@test.com', 'jane.doe');
+
+        cy.visit('/');
+        cy.get('[data-cy="accountButton"]').click();
+        cy.get('[data-cy="userProfileButton"] span').should('contain.text', 'jane.doe@test.com');
+    });
 });
