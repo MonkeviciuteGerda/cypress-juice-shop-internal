@@ -8,19 +8,19 @@ describe('Home Page', () => {
         cy.visit('/');
         cy.get('[data-cy="accountButton"]').click();
         cy.get('#navbarLoginButton').click();
-        cy.get('#email').type('jane.doe@test.com');
-        cy.get('#password').type('jane.doe');
+        cy.get('#email').type(Cypress.env('email'));
+        cy.get('#password').type(Cypress.env('password'));
         cy.get('#loginButton').click();
 
         cy.get('[data-cy="accountButton"]').click();
-        cy.get('[data-cy="userProfileButton"] span').should('contain.text', 'jane.doe@test.com');
+        cy.get('[data-cy="userProfileButton"] span').should('contain.text', Cypress.env('email'));
     });
 
     it('should be able to login without UI', () => {
-        cy.login('jane.doe@test.com', 'jane.doe');
+        cy.login(Cypress.env('email'), Cypress.env('password'));
 
         cy.visit('/');
         cy.get('[data-cy="accountButton"]').click();
-        cy.get('[data-cy="userProfileButton"] span').should('contain.text', 'jane.doe@test.com');
+        cy.get('[data-cy="userProfileButton"] span').should('contain.text', Cypress.env('email'));
     });
 });
