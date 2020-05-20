@@ -8,6 +8,13 @@ describe('Address page', () => {
         cy.visit('/#/address/saved');
     });
 
+    beforeEach(() => {
+        cy.restoreLocalStorage();
+        Cypress.Cookies.preserveOnce('token');
+        Cypress.Cookies.preserveOnce('cookieconsent_status');
+        Cypress.Cookies.preserveOnce('welcomebanner_status');
+    });
+
     it('should be able to create new address', () => {
         cy.get('[data-cy="addNewAddressButton"]').click();
         cy.get('#address-form').within(() => {
@@ -72,5 +79,9 @@ describe('Address page', () => {
             cy.get('[data-cy="editAddressButton"]').should('be.visible');
             cy.get('[data-cy="deleteAddressButton"]').should('be.visible');
         });
+    });
+
+    afterEach(() => {
+        cy.saveLocalStorage();
     });
 });
