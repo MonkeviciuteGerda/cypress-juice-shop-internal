@@ -1,11 +1,47 @@
+import AddressPage from '../page-objects/address/addressPage';
+import AssertAddressPage from '../page-objects/address/assertAddressPage';
+
+const addressPage = new AddressPage();
+const assertAddressPage = new AssertAddressPage();
+
 const addressName = `Cypress random address name ${Math.floor(Math.random() * 10000000)}`;
 const editAddressName = `Cypress random edit address name ${Math.floor(Math.random() * 10000000)}`;
+const addressDetails = {
+    country: 'Country',
+    addressName: addressName,
+    mobileNumber: '1111111111',
+    zipCode: '11111',
+    address: 'Address',
+    city: 'City',
+    state: 'State'
+};
 
+const addressDetailsInTable = {
+    name: addressDetails.addressName,
+    address: `${addressDetails.address}, ${addressDetails.city}, ${addressDetails.state}, ${addressDetails.zipCode}`,
+    country: addressDetails.country
+};
+
+const editAddressDetails = {
+    country: 'Country',
+    addressName: editAddressName,
+    mobileNumber: '1111111111',
+    zipCode: '11111',
+    address: 'Address',
+    city: 'City',
+    state: 'State'
+};
+
+const editedAddressDetailsInTable = {
+    name: editAddressDetails.addressName,
+    address: `${editAddressDetails.address}, ${editAddressDetails.city}, ${editAddressDetails.state}, ${editAddressDetails.zipCode}`,
+    country: editAddressDetails.country
+};
 
 describe('Address page', () => {
     before(() => {
         cy.login(Cypress.env('email'), Cypress.env('password'));
-        cy.visit('/#/address/saved');
+        addressPage.openAddressPage();
     });
 
     beforeEach(() => {
@@ -16,25 +52,11 @@ describe('Address page', () => {
     });
 
     it('should be able to create new address', () => {
-        cy.get('[data-cy="addNewAddressButton"]').click();
-        cy.get('#address-form').within(() => {
-            cy.get('input').eq(0).type('Country');
-            cy.get('input').eq(1).type(addressName);
-            cy.get('input').eq(2).type('1111111111');
-            cy.get('input').eq(3).type('11111');
-            cy.get('textarea').type('Address');
-            cy.get('input').eq(4).type('City');
-            cy.get('input').eq(5).type('State');
-        });
-        cy.get('[data-cy="addressSubmitButton"]').click();
+        addressPage.openAddressForm();
+        addressPage.fillInAddressForm(addressDetails);
+        addressPage.submitAddressForm();
 
-        cy.get('[data-cy="addressTableRow"]').last().within(() => {
-            cy.get('[data-cy="addressName"]').should('contain.text', addressName);
-            cy.get('[data-cy="fullAddress"]').should('contain.text', 'Address, City, State, 11111');
-            cy.get('[data-cy="country"]').should('contain.text', 'Country');
-            cy.get('[data-cy="editAddressButton"]').should('be.visible');
-            cy.get('[data-cy="deleteAddressButton"]').should('be.visible');
-        });
+        assertAddressPage.assertAddressTableLastRow(addressDetailsInTable);
     });
 
     it('should be able to edit existing address', () => {
@@ -60,25 +82,11 @@ describe('Address page', () => {
 
         cy.reload();
 
-        cy.get('[data-cy="addressTableRow"]').last().find('[data-cy="editAddressButton"]').click();
-        cy.get('#address-form').within(() => {
-            cy.get('input').eq(0).clear().type('Country');
-            cy.get('input').eq(1).clear().type(editAddressName);
-            cy.get('input').eq(2).clear().type('1111111111');
-            cy.get('input').eq(3).clear().type('11111');
-            cy.get('textarea').clear().type('Address');
-            cy.get('input').eq(4).clear().type('City');
-            cy.get('input').eq(5).clear().type('State');
-        });
-        cy.get('[data-cy="addressSubmitButton"]').click();
+        addressPage.openLastAddressToEdit();
+        addressPage.fillInAddressForm(editAddressDetails);
+        addressPage.submitAddressForm();
 
-        cy.get('[data-cy="addressTableRow"]').last().within(() => {
-            cy.get('[data-cy="addressName"]').should('contain.text', editAddressName);
-            cy.get('[data-cy="fullAddress"]').should('contain.text', 'Address, City, State, 11111');
-            cy.get('[data-cy="country"]').should('contain.text', 'Country');
-            cy.get('[data-cy="editAddressButton"]').should('be.visible');
-            cy.get('[data-cy="deleteAddressButton"]').should('be.visible');
-        });
+        assertAddressPage.assertAddressTableLastRow(editedAddressDetailsInTable);
     });
 
     afterEach(() => {
