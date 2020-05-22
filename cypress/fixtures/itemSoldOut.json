@@ -1,0 +1,277 @@
+{
+    "status": "success",
+    "data": [
+      {
+        "id": 1,
+        "quantity": 0,
+        "limitPerUser": 5,
+        "createdAt": "2020-05-21T11:05:51.723Z",
+        "updatedAt": "2020-05-21T11:05:51.723Z",
+        "ProductId": 1
+      },
+      {
+        "id": 2,
+        "quantity": 71,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.723Z",
+        "updatedAt": "2020-05-21T11:05:51.723Z",
+        "ProductId": 2
+      },
+      {
+        "id": 3,
+        "quantity": 68,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.723Z",
+        "updatedAt": "2020-05-21T11:05:51.723Z",
+        "ProductId": 3
+      },
+      {
+        "id": 4,
+        "quantity": 59,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.723Z",
+        "updatedAt": "2020-05-21T11:05:51.723Z",
+        "ProductId": 4
+      },
+      {
+        "id": 5,
+        "quantity": 74,
+        "limitPerUser": 5,
+        "createdAt": "2020-05-21T11:05:51.724Z",
+        "updatedAt": "2020-05-21T11:05:51.724Z",
+        "ProductId": 5
+      },
+      {
+        "id": 6,
+        "quantity": 53,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.724Z",
+        "updatedAt": "2020-05-21T11:05:51.724Z",
+        "ProductId": 6
+      },
+      {
+        "id": 7,
+        "quantity": 41,
+        "limitPerUser": 5,
+        "createdAt": "2020-05-21T11:05:51.724Z",
+        "updatedAt": "2020-05-21T11:05:51.724Z",
+        "ProductId": 7
+      },
+      {
+        "id": 8,
+        "quantity": 37,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.724Z",
+        "updatedAt": "2020-05-21T11:05:51.724Z",
+        "ProductId": 8
+      },
+      {
+        "id": 9,
+        "quantity": 47,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.724Z",
+        "updatedAt": "2020-05-21T11:05:51.724Z",
+        "ProductId": 9
+      },
+      {
+        "id": 10,
+        "quantity": 86,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.724Z",
+        "updatedAt": "2020-05-21T11:05:51.724Z",
+        "ProductId": 10
+      },
+      {
+        "id": 11,
+        "quantity": 40,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.724Z",
+        "updatedAt": "2020-05-21T11:05:51.724Z",
+        "ProductId": 11
+      },
+      {
+        "id": 12,
+        "quantity": 46,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.725Z",
+        "updatedAt": "2020-05-21T11:05:51.725Z",
+        "ProductId": 12
+      },
+      {
+        "id": 13,
+        "quantity": 80,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.725Z",
+        "updatedAt": "2020-05-21T11:05:51.725Z",
+        "ProductId": 13
+      },
+      {
+        "id": 14,
+        "quantity": 72,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.725Z",
+        "updatedAt": "2020-05-21T11:05:51.725Z",
+        "ProductId": 14
+      },
+      {
+        "id": 15,
+        "quantity": 99,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.725Z",
+        "updatedAt": "2020-05-21T11:05:51.725Z",
+        "ProductId": 15
+      },
+      {
+        "id": 16,
+        "quantity": 93,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.725Z",
+        "updatedAt": "2020-05-21T11:05:51.725Z",
+        "ProductId": 16
+      },
+      {
+        "id": 17,
+        "quantity": 38,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.725Z",
+        "updatedAt": "2020-05-21T11:05:51.725Z",
+        "ProductId": 17
+      },
+      {
+        "id": 18,
+        "quantity": 31,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.725Z",
+        "updatedAt": "2020-05-21T11:05:51.725Z",
+        "ProductId": 18
+      },
+      {
+        "id": 19,
+        "quantity": 49,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.725Z",
+        "updatedAt": "2020-05-21T11:05:51.725Z",
+        "ProductId": 19
+      },
+      {
+        "id": 20,
+        "quantity": 5,
+        "limitPerUser": 5,
+        "createdAt": "2020-05-21T11:05:51.726Z",
+        "updatedAt": "2020-05-21T11:05:51.726Z",
+        "ProductId": 20
+      },
+      {
+        "id": 21,
+        "quantity": 36,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.726Z",
+        "updatedAt": "2020-05-21T11:05:51.726Z",
+        "ProductId": 21
+      },
+      {
+        "id": 22,
+        "quantity": 35,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.726Z",
+        "updatedAt": "2020-05-21T11:05:51.726Z",
+        "ProductId": 22
+      },
+      {
+        "id": 23,
+        "quantity": 75,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.726Z",
+        "updatedAt": "2020-05-21T11:05:51.726Z",
+        "ProductId": 23
+      },
+      {
+        "id": 24,
+        "quantity": 73,
+        "limitPerUser": 5,
+        "createdAt": "2020-05-21T11:05:51.726Z",
+        "updatedAt": "2020-05-21T11:05:51.726Z",
+        "ProductId": 24
+      },
+      {
+        "id": 25,
+        "quantity": 70,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.726Z",
+        "updatedAt": "2020-05-21T11:05:51.726Z",
+        "ProductId": 25
+      },
+      {
+        "id": 26,
+        "quantity": 93,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.726Z",
+        "updatedAt": "2020-05-21T11:05:51.726Z",
+        "ProductId": 26
+      },
+      {
+        "id": 27,
+        "quantity": 1,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.726Z",
+        "updatedAt": "2020-05-21T11:05:51.726Z",
+        "ProductId": 27
+      },
+      {
+        "id": 28,
+        "quantity": 61,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.727Z",
+        "updatedAt": "2020-05-21T11:05:51.727Z",
+        "ProductId": 28
+      },
+      {
+        "id": 29,
+        "quantity": 70,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.727Z",
+        "updatedAt": "2020-05-21T11:05:51.727Z",
+        "ProductId": 29
+      },
+      {
+        "id": 30,
+        "quantity": 42,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.727Z",
+        "updatedAt": "2020-05-21T11:05:51.727Z",
+        "ProductId": 30
+      },
+      {
+        "id": 31,
+        "quantity": 50,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.727Z",
+        "updatedAt": "2020-05-21T11:05:51.727Z",
+        "ProductId": 31
+      },
+      {
+        "id": 32,
+        "quantity": 83,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.727Z",
+        "updatedAt": "2020-05-21T11:05:51.727Z",
+        "ProductId": 32
+      },
+      {
+        "id": 33,
+        "quantity": 3,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.727Z",
+        "updatedAt": "2020-05-21T11:05:51.727Z",
+        "ProductId": 33
+      },
+      {
+        "id": 34,
+        "quantity": 0,
+        "limitPerUser": null,
+        "createdAt": "2020-05-21T11:05:51.727Z",
+        "updatedAt": "2020-05-21T11:05:51.727Z",
+        "ProductId": 34
+      }
+    ]
+  }
