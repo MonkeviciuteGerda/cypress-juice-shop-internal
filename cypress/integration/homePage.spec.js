@@ -1,6 +1,8 @@
 import HomePage from '../page-objects/homePage/homePage';
+import WaitForRequests from '../utils/waitForRequests';
 
 const homePage = new HomePage();
+const waitForRequests = new WaitForRequests();
 
 describe('Home Page', () => {
     it('should be able to visit home page', () => {
@@ -33,7 +35,10 @@ describe('Home Page', () => {
         let secondPagePaginatorText;
 
         cy.login(Cypress.env('email'), Cypress.env('password'));
+
+        waitForRequests.waitForProductsList();
         cy.visit('/');
+        cy.wait('@productsList');
 
         homePage.getPaginationElement().then(($elem) => {
             firstPagePaginatorText = $elem.text();
