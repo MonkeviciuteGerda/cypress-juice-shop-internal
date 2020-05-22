@@ -1,8 +1,12 @@
 import HomePage from '../page-objects/homePage/homePage';
+import AssertHomePage from '../page-objects/homePage/assertHomePage';
 import WaitForRequests from '../utils/waitForRequests';
+import UseFixture from '../utils/useFixture';
 
 const homePage = new HomePage();
+const assertHomePage = new AssertHomePage();
 const waitForRequests = new WaitForRequests();
+const useFixture = new UseFixture();
 
 describe('Home Page', () => {
     it('should be able to visit home page', () => {
@@ -52,5 +56,15 @@ describe('Home Page', () => {
             expect(firstPagePaginatorText).not.to.eq(secondPagePaginatorText);
             expect($elem2).to.contain.text('13 – 24 of');
         });
+    });
+
+    it('should be able to see sold out item', () => {
+        cy.login(Cypress.env('email'), Cypress.env('password'));
+
+        useFixture.itemSoldOut();
+        cy.visit('/');
+        cy.wait('@itemSoldOut');
+
+        assertHomePage.assertSoldOutLabelIsVisible(0);
     });
 });
