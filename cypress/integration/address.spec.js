@@ -66,6 +66,7 @@ describe('Address page', () => {
         cy.reload();
 
         addressPage.openLastAddressToEdit();
+        cy.screenshot();
         addressPage.fillInAddressForm(editAddressDetails);
         addressPage.submitAddressForm();
 
