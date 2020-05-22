@@ -4,7 +4,8 @@
   "description": "\"# cypress-juice-shop-internal\"",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "repository": {
     "type": "git",
