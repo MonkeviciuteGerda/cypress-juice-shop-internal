@@ -1,7 +1,8 @@
 const express = require('express');
+const cypressConfig = require('../../cypress');
 
 const app = express();
-const baseURL = 'http://localhost:3000';
+const baseURL = cypressConfig.baseUrl;
 const axios = require('axios').default.create({ baseURL });
 
 let token;
@@ -22,7 +23,7 @@ app.get('/connect', (req, res) => {
             console.log(`Logged in as ${username}`);
             res.sendStatus(200);
         }
-  
+
         res.sendStatus(401);
     }).catch((e) => {
         console.log('Auth error', e.message);
