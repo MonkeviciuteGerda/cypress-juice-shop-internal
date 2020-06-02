@@ -23,8 +23,6 @@ app.get('/connect', (req, res) => {
             console.log(`Logged in as ${username}`);
             res.sendStatus(200);
         }
-
-        res.sendStatus(401);
     }).catch((e) => {
         console.log('Auth error', e.message);
         res.sendStatus(500);
